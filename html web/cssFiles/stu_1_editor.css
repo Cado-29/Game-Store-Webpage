@@ -1,0 +1,41 @@
+body {
+  margin:46px;
+  background-image:url("../images/student1/bckgrnd.jpg");
+  background-size: cover;
+  color:black ;
+  text-align:center;
+}
+.details {
+  border-top:3px solid black;
+  border-bottom:3px solid black;
+  font-size:34px;
+  text-align:center; 
+}
+
+.work{
+  font-weight:900;
+  font-size:28px; 
+  margin-top:70px;
+}
+
+.description {
+  margin:20px;
+  font-size:28px;
+}
+
+.link {
+  margin:23px;
+}
+
+.top a {
+  margin:23px;
+  font-size:23px;
+  float:right;
+  padding:12px;
+  border-radius:8px;
+  background-color:#efdfbb  ;
+}
+
+hr{
+  border:1px solid black
+}

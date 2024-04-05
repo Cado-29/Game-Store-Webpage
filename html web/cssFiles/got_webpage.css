@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.navSettings{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(5, 4, 53, 0.75)),url(../images/student1/R1.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+}
+
+.navbar ul li .active{
+    background: #121EDF;
+    box-shadow: 0 0 10px #121EDF,
+                0 0 20px #121EDF,
+                0 0 40px #121EDF,
+                0 0 80px #121EDF,
+                0 0 100px #121EDF;
+}
+
+.navbar ul li a{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0 10px;
+    padding: 5px 12px;
+    position: relative;
+}
+
+.navbar ul li a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: #121EDF;
+    z-index: -1;
+    box-shadow: 0 0 10px #121EDF,
+                0 0 20px #121EDF,
+                0 0 40px #121EDF,
+                0 0 80px #121EDF,
+                0 0 100px #121EDF;
+    transition: 0.25s;
+}
+
+.navbar ul li a:hover:before{
+    width: 100%;
+}
+
+.logo{
+    width: 150px;
+}
+
+.welcome{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.welcome h1{
+    font-size: 62px;
+}
+.welcome p{
+    margin: 10px 0 40px;
+    font-size: 16px;
+    color: #fff;
+}
+.welcomeButton{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.welcomeButton:hover{
+    box-shadow: 0 0 10px #121EDF,
+                0 0 20px #121EDF,
+                0 0 40px #121EDF,
+                0 0 80px #121EDF,
+                0 0 100px #121EDF;
+    transition: 1s;
+}
+
+.gameTypes{
+    width: 80%;
+    margin: auto;
+    padding-top: 70px;
+    text-align: center;  
+}
+
+h1{
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+}
+
+p{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.gameTypes{
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0, 0, 0, 0.75)),url(../images/student1/R.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.ghost{
+    padding: 2px;
+    padding-top: 50px;
+}
+.nfs{
+    padding: 2px;
+    padding-top: 50px;
+}
+.elden{
+    padding: 2px;
+    padding-top: 50px;
+}
+
+
+
+#myVideo{
+    width: 1000px;
+    height: 500px;
+    position: relative;
+}
+
+.topButton{
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+.topButton:hover{
+    box-shadow: 0 0 10px red,
+    0 0 20px red,
+    0 0 40px red,
+    0 0 80px red,
+    0 0 100px red;
+    transition: 0.5s;
+}
+
+@media only screen and (max-width: 400px){
+    .navSettings,
+    .gameTypes{
+        width: 5%;
+        height: 5%;
+    }
+    #myvideo{
+        width: 5px;
+        height: 2px;
+    }
+}
+
+.gen {
+    width: 70%;
+    height: 50%;
+    position: relative; 
+}

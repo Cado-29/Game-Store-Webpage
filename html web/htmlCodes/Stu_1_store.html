@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="../cssFiles/Stu_1_store.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Store Page</title>
+</head>
+<body style="background-color:black;">
+<!-- Navigation bar -->
+<div class="navbar" data-aos="fade" id="navbar">
+    <img src="../images/logo.jpg" class="logo" alt="logo"> <!-- https://th.bing.com/th/id/OIP.RnCHc4xH46y_XKyiOaJQIAHaEK?pid=ImgDet&rs=1 -->
+    <ul data-aos="slide-left">
+        <li><a href="home.html" class="home" data-aos="fade-up">Home</a></li>
+        <li><a href="../form/form.html" class="comments" data-aos="fade-up">Comments</a></li>
+        <li><a href="Stu_1_store.html" class="shop" data-aos="fade-up">Shop</a></li>
+        <li><a href="interactive_quizz.html" class="quiz" data-aos="fade-up">Quiz</a></li>
+        <li><a href="sitemap.html" class="sitemap" data-aos="fade-up">Site Map</a></li>
+		    <li><a href="gallery.html" class="gallery" data-aos="fade-up">Gallery</a></li>
+        <li><a href="about_us.html" class="about" data-aos="fade-up">About</a></li>
+    </ul>  
+</div>
+
+<!-- Checkout Form -->
+<div class="billing" data-aos="fade-up">
+	<button class="closebtn" onclick="cartclose()">&#10006;</button>
+		<form name="form_1" class="form_1">
+		<div class="row">
+          <div class="column">
+            <h3>User Details</h3>
+            <label for="fname"><i class="fa fa-user"></i> Full Name<span style="color:red;">*</span></label>
+            <input type="text" id="fname" name="firstname" placeholder="E. Yeager" required>
+            <label for="email_2"><i class="fa fa-envelope"></i> Email<span style="color:red;">*</span></label>
+            <input type="text" id="email_2" name="email" placeholder="Yeager@example.com" required>
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country" placeholder="Japan" >
+			<label for="price">Price</label>
+            <input type="text" id="price" name="price" readonly>
+
+          </div>
+
+          <div class="column">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>            </div>
+            <label for="cname">Name on Card<span style="color:red;">*</span></label>
+            <input type="text" id="cname" name="cardname" placeholder="Eren Yeager" required>
+            <label for="ccnum">Credit card number<span style="color:red;">*</span></label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" required>
+            <label for="expmonth">Exp Month and Year<span style="color:red;">*</span></label>
+            <input type="month" id="expmonth" name="expmonth" required>
+              <div class="column" style="margin-left:-60px;">
+                <label for="cvv">CVV<span style="color:red;">*</span></label>
+                <input type="text" id="cvv" name="cvv" placeholder="352" required>
+              </div>
+			
+			
+			</div>
+        </div>
+		<div class="btn_align">
+        <input type="submit" value="Continue to checkout" class="btn" onclick="check()">
+		</div>
+		</form>
+</div>
+
+
+<!-- My Cart Block --> 
+<button id="cart" onclick="carter()">&#128722; CART</button>
+<div class="cart_box" data-aos="fade-up">
+  <h2 class="cart_font">My Cart</h2>
+	<div class="content">
+		<div class="checkout_box">
+			<img src="../images/student1/got12.jpg" class="cart_items" alt="product image"> <!-- https://th.bing.com/th/id/R.257824b77a5abca938b10615bf6f15be?rik=WSSHV7p2WbSJ8A&pid=ImgRaw&r=0 -->
+			<div class="detail-box">
+				<div class="cart_items__title">Ghost of Tsushima</div>
+				<div class="price">$70</div>
+				<div class="add" id="add_1"> Not Added</div>
+			</div>
+			<button class="remove" id="remove_1" onclick="myfunction_1()"> +</button>
+			<img src="../images/student1/OIP1.jpg" class="cart_items" alt="product image">  <!-- https://th.bing.com/th/id/R.dfc99cbf87ccab6c6528c8c9b2ab1f81?rik=4BEngOhYZzuUnA&pid=ImgRaw&r=0 -->
+			<div class="detail-box">
+				<div class="cart_items__title">Genshin Impact</div>
+				<div class="price">$30</div>
+				<div class="add" id="add_2"> Not Added</div>
+			</div>
+			<button class="remove" id="remove_2" onclick="myfunction_2()"> +</button>
+			<img src="../images/student1/nfs1.png" class="cart_items" alt="product image"> <!-- https://fitgirl-repack.com/wp-content/uploads/2022/11/NFS-Unbound2.jpg -->
+			<div class="detail-box">
+				<div class="cart_items__title">Need for Speed™ Unbound Palace Edition</div>
+				<div class="price">$70</div>
+				<div class="add" id="add_3"> Not Added</div>
+			</div>
+			<button class="remove" id="remove_3" onclick="myfunction_3()">+</button>
+			<img src="../images/student1/er1.jpg" class="cart_items" alt="product image">  <!-- https://www.gameinformer.com/sites/default/files/styles/product_box_art/public/2021/06/11/ae21622c/eldenring.jpg -->
+			<div class="detail-box">
+				<div class="cart_items__title">Elden Ring</div>
+				<div class="price">$40</div>
+				<div class="add" id="add_4"> Not Added</div>
+			</div>
+			<button class="remove" id="remove_4" onclick="myfunction_4()"> +</button>
+		</div>
+	</div>
+	<div class="total">
+		<div class="total_title">Total</div>
+		<div class="total_price" id="total_price">$0</div>
+	</div>
+	<button class="button_buy" id="buy_button" onclick="cartopen_5()">Go to Checkout</button>
+	<button id="close" onclick="closer()">&#10006;</button>
+</div >
+
+<!-- Store -->
+<div class="store" data-aos="fade-up">
+  <img src="../images/student1/got.jpg" alt="game image">  <!-- https://th.bing.com/th/id/R.64d9995cf72419639dcc75de56114583?rik=BdSNWOYSBCUZEw&pid=ImgRaw&r=0 -->
+  <div class="desc">Ghost of Tsushima<br> $70  </div>
+  <div class="desc1">Forge a new path and wage an unconventional war for the freedom of Tsushima. <br>Challenge opponents with your katana, master the bow to eliminate distant threats,<br> develop stealth tactics to ambush enemies and explore a new story on Iki Island</div>
+  <br>
+  <button class="button_buy" onclick="cartopen_1()">BUY NOW</button>
+  <button class="button_cart" id="cart_1" onclick="myfunction_1()">&#128722; ADD TO CART</button>
+</div>
+
+<div class="store" data-aos="fade-up">
+  <img src="../images/student1/OIP.jpg" alt="game image">  <!-- https://wallpaperboat.com/wp-content/uploads/2020/11/17/61125/genshin-inpact-art-17-920x518.jpg -->
+  <div class="desc">Genshin Impact<br> $30  </div>
+  <div class="desc1">Embark on a journey across Teyvat to find your lost sibling and seek answers<br> from The Seven — the gods of each element and unravel the countless<br> mysteries that Teyvat holds...</div>
+  <br>
+  <button class="button_buy" onclick="cartopen_2()">BUY NOW</button>
+  <button class="button_cart" id="cart_2" onclick="myfunction_2()" >&#128722; ADD TO CART</button>
+</div>
+
+<div class="store" data-aos="fade-up">
+  <img src="../images/student1/nfs.jpg" alt="game image">   <!-- https://th.bing.com/th/id/OIP.-HWmm8F9U4Y-RctRriQv9gHaEK?pid=ImgDet&rs=1 -->
+  <div class="desc">Need for Speed™ Unbound Palace Edition<br> $70</div>
+  <div class="desc1">Race to the top, definitely don’t flop. Outsmart the cops, and enter weekly qualifiers<br> for The Grand: the ultimate street race. Pack your garage with precision-tuned,<br> custom rides and light up the streets with your style.<br></div>
+  <br>
+  <button class="button_buy" id="button_buy_1" onclick="cartopen_3()">BUY NOW</button>
+  <button class="button_cart" id="cart_3" onclick="myfunction_3()">&#128722; ADD TO CART</button>
+</div>
+
+<div class="store" data-aos="fade-up">
+  <img src="../images/student1/er.jpg" alt="game image">  <!-- https://th.bing.com/th/id/OIP.sokun3WTfbf3DXpmxNCKUAHaEK?pid=ImgDet&rs=1 -->
+  <div class="desc">Elden Ring<br> $40</div>
+  <div class="desc1">THE NEW FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace to <br>brandish the power of the Elden Ring and become an Elden Lord in the Lands<br> Between.</div>
+  <br>
+  <button class="button_buy" onclick="cartopen_4()">BUY NOW</button>
+  <button class="button_cart" id="cart_4" onclick="myfunction_4()">&#128722; ADD TO CART</button>
+</div>
+
+<div class="container" data-aos="fade-up">
+	<div class="con1">
+		<form name="form">
+			<h3 style="text-align:left;">Details</h3>
+			<label for="name">Name : </label>
+			<input type="text" id="name" name="name">
+			<label for="email_1">E-mail: </label>
+			<input type="email" id="email_1" name="email"><br><br>
+			<button type="button" onclick="pre_fill()" id="submit_button" >Submit</button>
+		</form>
+	</div>
+</div>
+<br><br>
+<div id="top">
+<!-- anchor to the top -->
+<a href="#navbar">Back to top of page</a>
+<!-- link to the editor page -->
+<a href="../editorHTML/Stu_1_Editorpage.html">Link to the editor page</a>
+</div>
+<!-- link to javascript file -->
+<script src="../javaSFiles/Stu_1_store.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+</body>
+</html>
